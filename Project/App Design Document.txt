@@ -1,0 +1,12 @@
+Calvin Chueh
+Project Design and App Design Document
+
+AppName is an app that allows university students  to easily schedule carpools and rides. It uses a calender and location to allow users to search and connect with other users. 
+
+This app is primarily for university students that must sign up with a .edu account as well as connect their facebook - age ranging from 18-24 ranging from any and all types of backgrounds - as long as they need to share a ride (ex. to/from airport). This app would be saving students money since sharing a ride is cheaper than paying for a cab oneself. This app would be used during/around vacation times as well as the beginning of school when many students fly in. 
+
+External Services include Parse, Calender API, Google Maps API
+
+Screens: 
+
+Experience: 
