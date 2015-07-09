@@ -42,7 +42,7 @@ class Post : PFObject, PFSubclassing {
         // any uploaded post should be associated with the current user
         user = PFUser.currentUser()
         self.imageFile = imageFile
-        saveInBackgroundWithBlock(nil)
+        saveInBackgroundWithBlock(ErrorHandling.errorHandlingCallback)
     }
     
     func downloadImage() {

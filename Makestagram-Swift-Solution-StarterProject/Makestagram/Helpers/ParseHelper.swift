@@ -61,21 +61,23 @@ class ParseHelper {
         let likeObject = PFObject(className: ParseLikeClass)
         likeObject[ParseLikeFromUser] = user
         likeObject[ParseLikeToPost] = post
-        likeObject.saveInBackgroundWithBlock(nil)
+        likeObject.saveInBackgroundWithBlock(ErrorHandling.errorHandlingCallback)
     }
     
     static func unlikePost(user: PFUser, post: Post) {
-        // 1
         let query = PFQuery(className: ParseLikeClass)
         query.whereKey(ParseLikeFromUser, equalTo: user)
         query.whereKey(ParseLikeToPost, equalTo: post)
         
         query.findObjectsInBackgroundWithBlock {
             (results: [AnyObject]?, error: NSError?) -> Void in
-            // 2
+            if let error = error {
+                ErrorHandling.defaultErrorHandler(error)
+            }
+            
             if let results = results as? [PFObject] {
                 for likes in results {
-                    likes.deleteInBackgroundWithBlock(nil)
+                    likes.deleteInBackgroundWithBlock(ErrorHandling.errorHandlingCallback)
                 }
             }
         }
@@ -131,10 +133,13 @@ class ParseHelper {
         query.findObjectsInBackgroundWithBlock {
             (results: [AnyObject]?, error: NSError?) -> Void in
             
+            if let error = error {
+                ErrorHandling.defaultErrorHandler(error)
+            }
             let results = results as? [PFObject] ?? []
             
             for follow in results {
-                follow.deleteInBackgroundWithBlock(nil)
+                follow.deleteInBackgroundWithBlock(ErrorHandling.errorHandlingCallback)
             }
         }
     }

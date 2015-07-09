@@ -53,6 +53,10 @@ extension ParseLoginHelper : PFLogInViewControllerDelegate {
             user.username = fbUsername
             // store PFUser
             user.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
+                
+              if let error = error {
+                  ErrorHandling.defaultErrorHandler(error)
+              }
               if (success) {
                 // updated username could be stored -> call success
                 self.callback(user, error)

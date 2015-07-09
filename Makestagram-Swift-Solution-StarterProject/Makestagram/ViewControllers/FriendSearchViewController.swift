@@ -68,6 +68,7 @@ class FriendSearchViewController: UIViewController {
     As soon as a query completes, this method updates the Table View.
     */
     func updateList(results: [AnyObject]?, error: NSError?) {
+        
         self.users = results as? [PFUser] ?? []
         self.tableView.reloadData()
         

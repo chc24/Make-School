@@ -157,7 +157,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="470" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="by1-db-Yak">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="470" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="by1-db-Yak">
                                 <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -174,7 +174,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKJ-yr-Lgf" userLabel="LikeButton">
-                                                    <rect key="frame" x="543" y="400" width="45" height="45"/>
+                                                    <rect key="frame" x="543" y="401" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="uCe-YD-ytQ"/>
                                                         <constraint firstAttribute="width" constant="45" id="wd3-fk-3nq"/>
@@ -189,7 +189,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDn-IO-hBA" userLabel="MoreButton">
-                                                    <rect key="frame" x="8" y="406" width="45" height="45"/>
+                                                    <rect key="frame" x="8" y="407" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="8B9-In-Rf9"/>
                                                         <constraint firstAttribute="width" constant="45" id="amN-Qm-Kso"/>
@@ -202,14 +202,14 @@
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="wc1-qj-V0A" userLabel="LikesIcon">
-                                                    <rect key="frame" x="20" y="366" width="20" height="20"/>
+                                                    <rect key="frame" x="20" y="367" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="VJJ-gE-0Hi"/>
                                                         <constraint firstAttribute="width" constant="20" id="ybL-QO-i1Z"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60cal" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9g-O3-4vk" userLabel="LikesLabel">
-                                                    <rect key="frame" x="70" y="366" width="42" height="21"/>
+                                                    <rect key="frame" x="70" y="367" width="42" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="kcU-p6-J6x"/>
                                                         <constraint firstAttribute="height" constant="21" id="qH9-XH-MMH"/>
@@ -263,6 +263,47 @@
                                             <outlet property="postImageView" destination="zEp-ej-4DC" id="72m-1e-sOn"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostHeader" rowHeight="40" id="Tfj-Me-DbZ" customClass="PostSectionHeaderView" customModule="Makestagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tfj-Me-DbZ" id="cYL-fE-HkL">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qr9-K7-qa3">
+                                                    <rect key="frame" x="8" y="13" width="36" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Time" translatesAutoresizingMaskIntoConstraints="NO" id="ShV-3I-WRW">
+                                                    <rect key="frame" x="564" y="10" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="7VU-E4-g4h"/>
+                                                        <constraint firstAttribute="width" constant="20" id="rxR-YY-rcs"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPS-Ot-RQk">
+                                                    <rect key="frame" x="519" y="13" width="37" height="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <color key="textColor" red="0.19602272727272729" green="0.19602272727272729" blue="0.19602272727272729" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qr9-K7-qa3" firstAttribute="leading" secondItem="cYL-fE-HkL" secondAttribute="leadingMargin" id="C9H-CL-27V"/>
+                                                <constraint firstItem="ShV-3I-WRW" firstAttribute="leading" secondItem="DPS-Ot-RQk" secondAttribute="trailing" constant="8" id="FZE-mI-8G8"/>
+                                                <constraint firstAttribute="centerY" secondItem="Qr9-K7-qa3" secondAttribute="centerY" constant="-1.5" id="Gwl-3O-FUY"/>
+                                                <constraint firstAttribute="centerY" secondItem="ShV-3I-WRW" secondAttribute="centerY" id="NC2-RY-Bqv"/>
+                                                <constraint firstAttribute="centerY" secondItem="DPS-Ot-RQk" secondAttribute="centerY" constant="-1.5" id="VsJ-RH-JvZ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ShV-3I-WRW" secondAttribute="trailing" constant="8" id="jfY-0i-suq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="timeLabel" destination="DPS-Ot-RQk" id="AvD-bX-xAM"/>
+                                            <outlet property="usernameLabel" destination="Qr9-K7-qa3" id="H5j-Wk-1SW"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="3GH-J5-JKt" id="YHe-B6-l0P"/>
@@ -299,5 +340,6 @@
         <image name="Home" width="38" height="36"/>
         <image name="More" width="26" height="17"/>
         <image name="People" width="42" height="42"/>
+        <image name="Time" width="22" height="22"/>
     </resources>
 </document>
