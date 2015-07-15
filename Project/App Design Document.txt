@@ -1,12 +1,45 @@
 Calvin Chueh
 Project Design and App Design Document
 
-AppName is an app that allows university students  to easily schedule carpools and rides. It uses a calender and location to allow users to search and connect with other users. 
+AppName is an app that allows university students  to easily schedule carpools and rides. It uses calender date/time and location to allow users to search and connect with other users. 
 
 This app is primarily for university students that must sign up with a .edu account as well as connect their facebook - age ranging from 18-24 ranging from any and all types of backgrounds - as long as they need to share a ride (ex. to/from airport). This app would be saving students money since sharing a ride is cheaper than paying for a cab oneself. This app would be used during/around vacation times as well as the beginning of school when many students fly in. 
 
-External Services include Parse, Calender API, Google Maps API
+APIs and External Services:
+SwiftValidator - https://github.com/jpotts18/SwiftValidator
+CryptoSwift - https://github.com/krzyzanowskim/CryptoSwift
+plivo - SMS verification
 
-Screens: 
+Screens: Home View is the Search View, allows user to search for carpool. Middle View on the tab bar allows connected students to view their current carpool (unaccessible otherwise). Third tab bar is Settings, allows user to log out and view App details. 
 
-Experience: 
+Experience: A typical user might be frustrated that nobody is responding to their univeristy facebook group post about sharing a ride to/from the airport at x date and y time. They might hear about AppName and download it, since they have nothing to lose and only money to save if they find someone to share with. The app should be convenient and straightforward, allowing them either to check a date on a calender or simply search for a date/time range in whcih they would be willing to share a ride. 
+
+List Apps:
+"Share the Ride - NC" - but this is for complete strangers, online only, not efficient. https://www.sharetheridenc.org/public/home.aspx 
+Does not target students
+
+
+MVP Milestones:
+Tasks: 
+Come up with a name
+Design Screens, Views, Controllers
+"select your school" - Duke (VERSION 1)
+Enable Push or Email notifications in the event of a match
+Integrate Facebook login, verify email .edu
+Method to store email verified for accounts (Parse_User?) 
+<integrate maps API>
+#integrate calender API
+integrate search function
+<integrate database Parse to store "Share" objects>
+Integrate chat/connect feature (Connect room for up to x people)
+
+Week of July 15
+-Add Facebook Login
+-Set up all controllers and segues
+-Add loading screen
+-Register New App with Facebook Developers/Decide between Parse/Firebase
+-Add Email or SMS Verification ~ ~ Might be next week
+
+
+
+
