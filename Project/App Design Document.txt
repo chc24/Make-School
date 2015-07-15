@@ -18,6 +18,21 @@ List Apps:
 "Share the Ride - NC" - but this is for complete strangers, online only, not efficient. https://www.sharetheridenc.org/public/home.aspx 
 Does not target students
 
+Data:
+
+Facebook User Object
+	-Username
+	-email/phone verified (Bool)
+	-Profile Pic as Thumbnail
+	-authData (FB ID)
+
+Post Object
+	-Time Range Parse Date
+	-Pointer fromUser
+
+Carpool/Match Object
+	-Pointer FromUser
+	-Pointer ToUser
 
 MVP Milestones:
 Tasks: 
@@ -37,7 +52,6 @@ Week of July 15
 -Add Facebook Login
 -Set up all controllers and segues
 -Add loading screen
--Register New App with Facebook Developers/Decide between Parse/Firebase
 -Add Email or SMS Verification ~ ~ Might be next week
 
 
